@@ -1,0 +1,24 @@
+.headerMain {
+    height: 60px;
+    background-color: #212529;
+}
+.logoMain {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.logoMain img {
+    width: 85px;
+}
+.navBar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    list-style: none;
+}
+.navBar .navBarItem a{
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 20px;
+    color: white;
+}

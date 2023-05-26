@@ -1,0 +1,112 @@
+/* prouct-card-start */
+.product-card {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 24px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgb(0 0 0 / 20%);
+}
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.info-name-price {
+    height: 100%;
+}
+
+.product-card .product-info a span p {
+    margin: 0;
+}
+.product-card .product-info a {
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    color: white;
+    height: 140px;
+    text-decoration: none;
+}
+.price-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-rating h6 span {
+    font-size: 20px;
+    color: white;
+}
+.price-rating h6 {
+    color: #8F85A7;
+}
+
+.product-card:hover{
+    cursor: pointer;
+}
+.product-card:hover img,.product-card:hover .product-info {
+    opacity: 0.4;
+}
+.product-card:hover .product-overview {
+    transform: translateY(0);
+}
+.info-name-price h6 a {
+    text-decoration: none;
+    color: white;
+}
+.product-overview {
+    z-index: 2;
+    transform: translateY(-100%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+    max-height: 100%;
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+.platforms-icon i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.product-overview h6 {
+    margin: 0px;
+    margin-top: 10px;
+}
+.product-rating {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(124, 252, 0 ,0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-rating.blue {
+    border: 1px solid rgba(124, 252, 0 ,0.5);
+    color: 	#7CFC00;
+}
+.product-rating.red {
+    border: 1px solid rgba(255, 0, 0,0.5) ;
+    color: red;
+
+}
+.product-rating.orange {
+    border: 1px solid rgba(242, 121, 53, 0.5);
+    color: orange;
+}
+.product-rating.yellow {
+    border: 1px solid 	rgba(255,255,0, 0.5);
+    color: yellow;
+}
+.product-rating span {
+    font-size: 18px;
+    font-weight: 600;
+}
+.add-to-cart, .add-to-cart1 {
+    float: right;
+}
+.add-to-cart:hover {
+    color: #FAD318;
+}
