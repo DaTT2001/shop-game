@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const axiosClient = axios.create({
+export const axiosClient = axios.create({
   baseURL: 'https://rawg.io/api/',
   responseType: 'json',
   headers: { 'X-Requested-With': 'XMLHttpRequest' }
@@ -11,5 +11,3 @@ export const defaultParams = {
     stores: 1,
     metacritic: '1,100',
 };
-
-export default axiosClient;

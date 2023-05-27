@@ -1,0 +1,31 @@
+.wrap-cart {
+    /* color: white; */
+    position: fixed ;
+    right: 20px;
+    bottom: 20px;
+    /* padding: 20px; */
+    background-color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+.wrap-cart i {
+    font-size: 30px;
+}
+.cart-quantity {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    right: 0px;
+    color: white;
+}

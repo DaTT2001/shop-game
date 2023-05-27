@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { FullData, GameDetails } from '../interfaces';
-import axiosClient, {defaultParams} from './config';
+import { FullData, GameDetails, ProductCardProps } from '../interfaces';
+import { axiosClient, defaultParams } from './config';
 
 axios.interceptors.response.use(
     response => {
@@ -24,4 +24,8 @@ export async function getGameDetail (id: number): Promise<GameDetails> {
 export async function getGamesFilter (page1: number, filter: string ): Promise<any> {
     const response = await axiosClient.get('games', {params: {...defaultParams, page: page1, search: filter, search_precise: false}});
     return response.data;
+}
+export async function addToCartApi (game: ProductCardProps): Promise<any> {
+  const response = await axios.post("https://todoapi-3m8o.onrender.com/carts", game )
+  return response.data;
 }

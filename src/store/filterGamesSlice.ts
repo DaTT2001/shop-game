@@ -1,6 +1,5 @@
-import { FilterInterface, FullData } from './../services/interfaces';
-import { Game } from '../services/interfaces';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { FilterInterface } from './../services/interfaces';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState: FilterInterface = {
     games: [],
@@ -22,7 +21,7 @@ const filterGamesSlice = createSlice({
         state.page = 1; 
         },
     }
-    });
+});
 
 
 export const { setFilter, setGames, setPage } = filterGamesSlice.actions;

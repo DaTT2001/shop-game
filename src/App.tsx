@@ -7,6 +7,7 @@ import Blog from './pages/Blog'
 import Layout from './pages/Layout'
 import NoPage from './pages/NoPage'
 import DetailProduct from './pages/DetailProduct'
+import Carts from './pages/Carts/Carts';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='products' element={<Products />} />
           <Route path='about-us' element={<About />} />
           <Route path='blog' element={<Blog />} />
+          <Route path='carts' element={<Carts />} />
           <Route path='*' element={<NoPage/>}/>
 
           {/* Detail Product */}

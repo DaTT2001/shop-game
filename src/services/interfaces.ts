@@ -119,3 +119,16 @@ export interface FilterInterface {
   page: number,
   filter: string
 }
+export interface ProductCard {
+  id: number;
+  background_image: string;
+  name: string;
+  metacritic: number;
+  rating : number;
+  genres : Genre[];
+  platforms: Platform[];
+  quantity: number
+}
+export interface Cart {
+  cart: ProductCard[],
+}

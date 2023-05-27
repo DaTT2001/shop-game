@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import gamesHomeSlice from './gamesHomeSlice';
 import filterGamesSlice from './filterGamesSlice';
+import cartSlice from './cartSlice';
 
 const store = configureStore({
   reducer: {
     getGamesHome: gamesHomeSlice,
-    filterGames: filterGamesSlice
+    filterGames: filterGamesSlice,
+    addToCard: cartSlice,
   },
 });
 

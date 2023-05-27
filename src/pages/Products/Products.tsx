@@ -10,7 +10,8 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 
 const Products = () => {
   const dispatch = useDispatch();
-  const {games, page, filter} = useSelector((state: RootState) => state.filterGames)
+  const {games, page, filter, } = useSelector((state: RootState) => state.filterGames)
+
   useEffect(() => {
     async function fetchData (): Promise<void> {
       try {

@@ -2,6 +2,10 @@ import React from "react";
 import productCard from "./ProductCard.module.css";
 import { Link } from "react-router-dom";
 import { ProductCardProps } from "../../services/interfaces";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { addToCart } from "../../store/cartSlice";
+import { addToCartApi } from "../../services/api/api";
 
 //khai bao platform
 const PC = 4
@@ -58,6 +62,8 @@ const showPlatforms = (platform : any): JSX.Element => {
       return <>{platformIcons}</>;
   }
 const ProductCard = ({ id, background_image, name, metacritic, rating, genres, platforms }: ProductCardProps) => {
+  const dispatch = useDispatch()
+  const { cart } = useSelector((state: RootState) => state.addToCard)
   return (
     <div className={productCard["product-card"]}>
       <Link to={`/product/${id}`}>
@@ -79,7 +85,7 @@ const ProductCard = ({ id, background_image, name, metacritic, rating, genres, p
       <div className={productCard["product-overview"]}>
         <p>Genres: {showGenre(genres)}</p>
         <div className={productCard["platforms-icon"]}> {showPlatforms(platforms)}
-        <span className={productCard["add-to-cart"]}><i className="bi bi-cart-plus-fill"></i></span>
+        <span className={productCard["add-to-cart"]} ><span onClick={() => { dispatch(addToCart({ id, background_image, name, metacritic, rating, genres, platforms, quantity: 0 }));}}><i className="bi bi-cart-plus-fill"></i></span></span>
         </div>
         </div>
     </div>
