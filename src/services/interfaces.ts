@@ -117,7 +117,9 @@ export interface ProductCardProps {
 export interface FilterInterface {
   games: Game[],
   page: number,
-  filter: string
+  search: string,
+  genres: string[],
+  platforms: string[]
 }
 export interface ProductCard {
   id: number;
